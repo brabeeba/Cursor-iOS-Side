@@ -13,6 +13,8 @@
 		AB4BAD131A345C43002F4B45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4BAD121A345C43002F4B45 /* Images.xcassets */; };
 		AB4BAD161A345C43002F4B45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4BAD141A345C43002F4B45 /* LaunchScreen.xib */; };
 		AB4BAD221A345C43002F4B45 /* CursorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4BAD211A345C43002F4B45 /* CursorTests.swift */; };
+		AB4BAD2C1A345C76002F4B45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4BAD2B1A345C76002F4B45 /* Foundation.framework */; };
+		AB4BAD2E1A345C7D002F4B45 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4BAD2D1A345C7D002F4B45 /* MultipeerConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		AB4BAD1B1A345C43002F4B45 /* CursorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CursorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4BAD201A345C43002F4B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4BAD211A345C43002F4B45 /* CursorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorTests.swift; sourceTree = "<group>"; };
+		AB4BAD2B1A345C76002F4B45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB4BAD2D1A345C7D002F4B45 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4BAD2E1A345C7D002F4B45 /* MultipeerConnectivity.framework in Frameworks */,
+				AB4BAD2C1A345C76002F4B45 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		AB4BACFD1A345C43002F4B45 = {
 			isa = PBXGroup;
 			children = (
+				AB4BAD2D1A345C7D002F4B45 /* MultipeerConnectivity.framework */,
+				AB4BAD2B1A345C76002F4B45 /* Foundation.framework */,
 				AB4BAD081A345C43002F4B45 /* Cursor */,
 				AB4BAD1E1A345C43002F4B45 /* CursorTests */,
 				AB4BAD071A345C43002F4B45 /* Products */,

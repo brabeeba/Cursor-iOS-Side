@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cursor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="basic 6 with logo" translatesAutoresizingMaskIntoConstraints="NO" id="PXP-p7-Hab">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-gd-n3f">
+                                <rect key="frame" x="230" y="405" width="141" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="9WV-2Z-JG4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="37"/>
+                                <state key="normal" title="connect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showBrowser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJz-tX-Ndn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67223735640000004" green="0.2185888936" blue="0.67887863010000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="PXP-p7-Hab" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3kX-zZ-anI"/>
+                            <constraint firstItem="PXP-p7-Hab" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Eiw-jW-yhf"/>
+                            <constraint firstItem="Y1D-gd-n3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jnp-b7-n0p"/>
+                            <constraint firstItem="Y1D-gd-n3f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="385" id="KP2-jg-INP"/>
+                            <constraint firstItem="PXP-p7-Hab" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Twy-z6-5DH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y1D-gd-n3f" secondAttribute="bottom" constant="114" id="a4B-Al-HSR"/>
+                            <constraint firstItem="PXP-p7-Hab" firstAttribute="centerX" secondItem="Y1D-gd-n3f" secondAttribute="centerX" id="obj-fH-d40"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0Vw-XN-UIU" appends="YES" id="BqD-9V-lRP"/>
+                            <outletCollection property="gestureRecognizers" destination="j9H-n1-Few" appends="YES" id="ptk-6a-yHu"/>
+                            <outletCollection property="gestureRecognizers" destination="eD7-Sz-HY4" appends="YES" id="Bmt-Le-Mqq"/>
+                            <outletCollection property="gestureRecognizers" destination="OZZ-Cy-CWT" appends="YES" id="w7T-YQ-cuz"/>
+                            <outletCollection property="gestureRecognizers" destination="F4C-42-9PA" appends="YES" id="Aeh-1p-HQ2"/>
+                        </connections>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="0Vw-XN-UIU">
+                    <connections>
+                        <action selector="handleMove:" destination="BYZ-38-t0r" id="yn0-zF-6sN"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Hpn-2p-P04"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="j9H-n1-Few">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="E7o-E2-GcD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="2" maximumNumberOfTouches="2" id="eD7-Sz-HY4">
+                    <connections>
+                        <action selector="handleScroll:" destination="BYZ-38-t0r" id="w1T-sO-KlA"/>
+                    </connections>
+                </panGestureRecognizer>
+                <swipeGestureRecognizer direction="up" numberOfTouchesRequired="3" id="OZZ-Cy-CWT">
+                    <connections>
+                        <action selector="swipeThreeUp:" destination="BYZ-38-t0r" id="iWd-RP-8Iu"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" numberOfTouchesRequired="3" id="F4C-42-9PA">
+                    <connections>
+                        <action selector="swipeThreeDown:" destination="BYZ-38-t0r" id="SfR-x7-FmK"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="basic 6 with logo" width="740" height="1304"/>
+    </resources>
 </document>
