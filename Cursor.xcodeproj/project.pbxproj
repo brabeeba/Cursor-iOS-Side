@@ -164,6 +164,7 @@
 		AB4BACFE1A345C43002F4B45 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Brabeeba Wang";
 				TargetAttributes = {
@@ -415,6 +416,7 @@
 				AB4BAD271A345C43002F4B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB4BAD281A345C43002F4B45 /* Build configuration list for PBXNativeTarget "CursorTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +425,7 @@
 				AB4BAD2A1A345C43002F4B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

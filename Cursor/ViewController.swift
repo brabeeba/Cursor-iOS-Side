@@ -82,7 +82,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessi
             velocity=sender.velocityInView(self.view)
         }
        if(sender.state==UIGestureRecognizerState.Cancelled){
-            let message="scroll "+"\(velocity.y)"+" "+"cancel"
+            let message="scroll \(velocity.y) cancel"
             velocity.x=0
             velocity.y=0
             //we encode the string into NSData
@@ -96,7 +96,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessi
             }
         }
        else if(sender.state==UIGestureRecognizerState.Began){
-        let message="scroll "+"\(translation.y)"+" "+"begin"
+        let message="scroll \(translation.y) begin"
         //we encode the string into NSData
         let msg=message.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         //we send the data to every peer that is connected to us in the session
@@ -110,7 +110,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessi
 
         else{
         
-        let message="scroll "+"\(translation.y)"
+        let message="scroll \(translation.y)"
         //we encode the string into NSData
         let msg=message.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         //we send the data to every peer that is connected to us in the session
@@ -134,7 +134,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessi
         translation = sender.translationInView(self.view)
         //we send the data with tag brabeeba at each time when the touch begins
         if(sender.state==UIGestureRecognizerState.Began){
-            let message="move "+"\(translation.x)"+" "+"\(translation.y)"+" "+"brabeeba"
+            let message = "move \(translation.x) \(translation.y) brabeeba"
             //we encode the string into NSData
             let msg=message.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
             //we send the data to every peer that is connected to us in the session
@@ -147,7 +147,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate, MCSessi
         }
             //if it is in the middle of dragging, we don't add brabeeba tag
         else{
-            let message="move "+"\(translation.x)"+" "+"\(translation.y)"
+            let message="move \(translation.x) \(translation.y)"
             //send information to peer
             let msg=message.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
             var error : NSError?
